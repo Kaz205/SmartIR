@@ -6,7 +6,7 @@
     "supportedController": "MQTT",
     "commandsEncoding": "Raw",
     "brightness": [
-	1,
+	13,
 	14,
 	27,
 	40,
