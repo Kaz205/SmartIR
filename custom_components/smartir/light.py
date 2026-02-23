@@ -327,7 +327,7 @@ class SmartIRLight(LightEntity, RestoreEntity):
                         new_brightness == len(self._brightnesses) - 1
                         or new_brightness == 0
                     ):
-                        steps = len(self._colortemps)
+                        steps = len(self._brightnesses)
                     did_something = True
                     self._brightness = self._brightnesses[new_brightness]
                     await self.send_command(cmd, steps)
@@ -363,6 +363,7 @@ class SmartIRLight(LightEntity, RestoreEntity):
             try:
                 for _ in range(count):
                     await self._controller.send(remote_cmd)
+                    await asyncio.sleep(self._delay)
             except Exception as e:
                 _LOGGER.exception(e)
 
