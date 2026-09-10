@@ -3,8 +3,8 @@
   "supportedModels": [
     "AR-RFL7J"
   ],
-  "supportedController": "Broadlink",
-  "commandsEncoding": "Base64",
+  "supportedController": "MQTT",
+  "commandsEncoding": "Raw",
   "minTemperature": 16,
   "maxTemperature": 30,
   "precision": 0.5,
